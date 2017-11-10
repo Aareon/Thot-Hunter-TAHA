@@ -3,3 +3,7 @@ Best Text-Based Python Game: "1 Quadrillion / 10" -IGN, "Story made me cry more 
 
 # Testimonies
 "Game made me lose No-Fap November" -Gabe Newell and 90% of Earth's men, "This is beautiful" -My Uncle
+
+# DISCLAIMER
+
+This game is in the works :)
