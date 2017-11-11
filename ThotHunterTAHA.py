@@ -4,7 +4,7 @@ turn = None
 choice = 0
 
 class Player:
-    player_name_opts = ('Jerry', 'Seinfield', 'Gumball The SJW Destroyer', 'Inigo The Brave', 'Noor The Thot/Furry/SJW Hunter', 'Erika Costell The Snake', 'Keemstar The Thot Obliterator')
+    player_name_opts = ('Makar', 'Joker', 'Gumball The SJW Destroyer', 'Inigo The Brave', 'Noor The Thot/Furry/SJW Hunter', 'Erika Costell The Snake', 'Keemstar The Thot Obliterator')
     def __init__(self, **kwargs):
         self.name = kwargs.get("name") or random.choice(self.player_name_opts)
         self.level = kwargs.get("level") or 0
