@@ -17,11 +17,14 @@ class Player:
                 self.level, self.name, self.health, self.attack)
 
     def attack():
+        try:
+            turn
+        except NameError:
+                turn = 0
         if turn == 1:
             choice = input('Type 1 or 2 in order to either attack or skip the turn')
         elif choice == '2':
             turn = 0
-            return turn
         elif choice == '1':
             roll = random.randint(1, 100)
             if roll == 69:
