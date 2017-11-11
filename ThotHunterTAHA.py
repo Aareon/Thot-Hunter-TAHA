@@ -30,10 +30,11 @@ class Player:
             roll = random.randint(1, 100)
             if roll == 69:
                 print('You missed!')
-                Turns.turn
+                turn = 1
             elif not roll == 69:
                 print('You Hit!')
                 Enemy.health = Enemy.health - Player.attack_s
+                print(f'The Enemy now has {Enemy.health}!')
 
 class Enemy:
     name_opts = ("Thot", "Alpha Thot", "Thot with Pumkin Spice", 'Erika Costell')
