@@ -1,5 +1,8 @@
 import random
 
+turn = None
+choice = 0
+
 class Player:
     player_name_opts = ('Jerry', 'Seinfield', 'Gumball The SJW Destroyer', 'Inigo The Brave', 'Noor The Thot/Furry/SJW Hunter', 'Erika Costell The Snake', 'Keemstar The Thot Obliterator')
     def __init__(self, **kwargs):
@@ -17,23 +20,17 @@ class Player:
                 self.level, self.name, self.health, self.attack)
 
     def attack():
-        try:
-            choice
-        except NameError:
-            choice
-        try:
-            turn
-        except NameError:
-                turn = 0
+        global turn
+        global choice
         if turn == 1:
-            choice = input('Type 1 or 2 in order to either attack or skip the turn')
+            choice = input('Type 1 or 2 in order to either attack or skip the turn: ')
         elif choice == '2':
-            turn = 0
+            turn = 1
         elif choice == '1':
             roll = random.randint(1, 100)
             if roll == 69:
                 print('You missed!')
-                turn = 0
+                Turns.turn
             elif not roll == 69:
                 print('You Hit!')
                 Enemy.health = Enemy.health - Player.attack_s
@@ -55,23 +52,22 @@ class Enemy:
                 self.name, self.health, self.attack, self.defense, self.level, self.experience)
 
     def __str__(self):
-        return "Level {} {} [HEALTH: {} | ATK: {} | XP: {}]".format(
+        return "Level {} {} [HEALTH: {} | ATK: {} | XP: {}] ENCOUNTERED".format(
                 self.level, self.name, self.health, self.attack, self.experience)
     def attack():
-        try:
-            turn
-        except NameError:
-            turn = 1
             roll = random.randint(1, 100)
-            if roll == 69:
-                print('The enemy missed missed!')
-                turn = 1
-            elif not roll == 69:
-                print('The enemy Hit!')
-                Enemy.health = Player.health - Enemy.attack
-                print(f'you lost {enemy.attack} health!')
+            if turn == 1:
+                if roll == 69:
+                    print('The enemy missed missed!')
+                elif not roll == 69:
+                    print('The enemy Hit!')
+                    Enemy.health = Player.health - Enemy.attack
+                    print(f'you lost {enemy.attack} health!')
+
 
 def enemy_encounter(location_level):
+    global turn
+    turn = random.randint(1, 2)
     enemy = Enemy(level=location_level)
     return enemy
 
