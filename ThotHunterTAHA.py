@@ -9,7 +9,7 @@ class Player:
         self.name = kwargs.get("name") or random.choice(self.player_name_opts)
         self.level = kwargs.get("level") or 0
         self.health = self.level * 3
-        self.attack_s = kwargs.get("attack") or self.level * 2
+        self.attack = kwargs.get("attack") or self.level * 2
 
     def __repr__(self):
         return "<player(name={}, health={}, attack={}, level={})>".format(
@@ -33,7 +33,7 @@ class Player:
                 turn = 1
             elif not roll == 69:
                 print('You Hit!')
-                Enemy.health = Enemy.health - Player.attack_s
+                Enemy.health = Enemy.health - Player.attack
                 print(f'The Enemy now has {Enemy.health}!')
 
 class Enemy:
