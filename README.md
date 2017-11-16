@@ -7,3 +7,6 @@ Best Text-Based Python Game: "1 Quadrillion / 10" -IGN, "Story made me cry more 
 # DISCLAIMER
 
 This game is in the works :) But it'll still make you lose No-Fap November
+
+# PR Reqs 
+Just Send Em
